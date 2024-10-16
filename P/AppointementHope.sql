@@ -1,0 +1,22 @@
+INSERT INTO Appointments(F_Name, L_Name, Message, Gender, Phone, Address, Date, DeptId, DocId)
+VALUES 
+('Ahmed', 'Hossam', 'Need consultation', 'Male', '01001234567', 'Cairo, Egypt', '2024-10-04 09:00:00', 1, 3),
+('Sara', 'Ahmed', 'Routine check-up', 'Female', '01007654321', 'Alexandria, Egypt', '2024-10-05 10:30:00', 2, 5),
+('Mohamed', 'Alaa', 'Follow-up for diabetes', 'Male', '01101239876', 'Giza, Egypt', '2024-10-06 11:00:00', 3, 2),
+('Heba', 'Ibrahim', 'Pediatric appointment', 'Female', '01234567890', 'Tanta, Egypt', '2024-10-07 12:00:00', 4, 1),
+('Youssef', 'Mahmoud', 'Skin rash consultation', 'Male', '01009876543', 'Cairo, Egypt', '2024-10-08 13:30:00', 5, 7),
+('Fatma', 'Hassan', 'Blood pressure issues', 'Female', '01106789123', 'Mansoura, Egypt', '2024-10-09 14:00:00', 6, 4),
+('Mahmoud', 'Kamel', 'Back pain consultation', 'Male', '01002223334', 'Suez, Egypt', '2024-10-10 15:00:00', 7, 6),
+('Amira', 'Salah', 'Heart-related issues', 'Female', '01234567654', 'Ismailia, Egypt', '2024-10-11 16:00:00', 8, 5),
+('Omar', 'Nabil', 'Allergy issues', 'Male', '01005566778', 'Luxor, Egypt', '2024-10-12 17:00:00', 9, 1),
+('Dina', 'Fathy', 'Annual physical check', 'Female', '01109988765', 'Aswan, Egypt', '2024-10-13 09:30:00', 10, 2),
+('Khaled', 'Adel', 'Digestive issues', 'Male', '01206677992', 'Cairo, Egypt', '2024-10-14 10:00:00', 3, 6),
+('Laila', 'Ehab', 'Headache consultation', 'Female', '01008765432', 'Alexandria, Egypt', '2024-10-15 11:00:00', 4, 8),
+('Tarek', 'Hassan', 'Skin irritation check', 'Male', '01107654321', 'Giza, Egypt', '2024-10-16 12:30:00', 5, 9),
+('Nour', 'Magdy', 'Fever consultation', 'Female', '01001239876', 'Tanta, Egypt', '2024-10-17 13:00:00', 6, 3),
+('Ziad', 'Ayman', 'Weight management', 'Male', '01209876543', 'Mansoura, Egypt', '2024-10-18 14:00:00', 2, 7),
+('Rana', 'Emad', 'Eye infection', 'Female', '01102225588', 'Cairo, Egypt', '2024-10-19 15:30:00', 1, 10),
+('Walid', 'Sameh', 'Joint pain consultation', 'Male', '01003217654', 'Suez, Egypt', '2024-10-20 16:00:00', 7, 2),
+('Marwa', 'Saad', 'Chronic cough', 'Female', '01234566789', 'Ismailia, Egypt', '2024-10-21 09:00:00', 9, 4),
+('Hassan', 'Osama', 'Throat infection', 'Male', '01107659874', 'Luxor, Egypt', '2024-10-22 10:30:00', 10, 1),
+('Nadia', 'Khalil', 'Diabetes follow-up', 'Female', '01009871234', 'Aswan, Egypt', '2024-10-23 11:00:00', 8, 6);

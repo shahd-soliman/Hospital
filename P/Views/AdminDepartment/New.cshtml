@@ -1,0 +1,58 @@
+﻿@model Department
+
+@{
+    ViewData["Title"] = "New";
+
+    Layout = "/Views/Shared/_AdminBodyLayout.cshtml";
+
+}
+
+<h3>
+    <i class="bi bi-plus-circle-dotted">New Department</i>
+</h3>
+<form asp-action="SaveNew" asp-controller="AdminDepartment" enctype="multipart/form-data">
+    <input type="hidden" asp-for="DeptId" />
+
+    <div class="from-group">
+        <label asp-for="DeptName" class="control-label"></label>
+        <input asp-for="DeptName" class="from-control" />
+    </div>
+    <div class="from-group">
+        <label asp-for="Description" class="control-label"></label>
+        <input asp-for="Description" class="from-control" />
+    </div>
+     <div class="from-group">
+        <label asp-for="DeptLocation" class="control-label"></label>
+        <input asp-for="DeptLocation" class="from-control" />
+    </div>
+    <div class="from-group">
+        <label asp-for="Logo" class="control-label"></label>
+        <input asp-for="Logo" class="from-control" />
+    </div>
+    <div class="from-group">
+        <label asp-for="Img" class="control-label"></label>
+        <input type="file" name="ImgFile" asp-for="Img" class="from-control" />
+    </div>
+    <div class="from-group">
+        <label asp-for="Headline" class="control-label"></label>
+        <input asp-for="Headline" class="from-control" />
+    </div>
+    <div class="from-group">
+        <label asp-for="Web_Id" class="control-label"></label>
+        <input asp-for="Web_Id" class="from-control" />
+    </div>
+
+
+    <div class="form-group">
+        <input type="submit" value="Add" class="btn btn-primary" />
+    </div>
+
+    <div>
+        <a class="btn btn-info rounded-1 rounded-2 me-5" asp-action="Index">
+            Back
+        </a>
+
+
+    </div>
+
+</form>

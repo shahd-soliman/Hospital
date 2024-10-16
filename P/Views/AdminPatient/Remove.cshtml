@@ -1,0 +1,19 @@
+﻿@model Patient
+@{
+    ViewData["Title"] = "Remove";
+
+    Layout = "/Views/Shared/_AdminBodyLayout.cshtml";
+}
+
+<h1>Confirm Deletion</h1>
+<div><p>Are you sure you want to delete the patient: @Model.F_Name @Model.L_Name ?</p></div>
+
+<form asp-action="ApplyRemove" asp-controller="AdminPatient">
+ <input type="hidden" asp-for="PId" />
+ <div>
+        <a asp-action="ApplyRemove" asp-route-id="@Model.PId" class="btn btn-danger">
+            Yes
+        </a>
+        <a class="btn btn-dark btn-success" asp-action="Index">No</a>
+    </div>
+</form>

@@ -1,0 +1,43 @@
+﻿@model P.Models.Room
+
+@{
+    ViewData["Title"] = "New";
+
+    Layout = "/Views/Shared/_AdminBodyLayout.cshtml";
+}
+
+<h1>Add</h1>
+
+<h4>Room</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="SaveNew" enctype="multipart/form-data">
+            <div class="form-group">
+                <label asp-for="RoomName" class="control-label"></label>
+                <input asp-for="RoomName" class="form-control" />
+                <span asp-validation-for="RoomName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Location" class="control-label"></label>
+                <input asp-for="Location" class="form-control" />
+                <span asp-validation-for="Location" class="text-danger"></span>
+            </div>
+          
+            
+            <div class="form-group">
+                <label asp-for="RoomImg" class="control-label"></label>
+                <input type="file" name="RoomImgFile" asp-for="RoomImg" class="form-control" />
+                <span asp-validation-for="RoomImg" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Add" class="genric-btn primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

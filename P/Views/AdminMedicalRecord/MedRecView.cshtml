@@ -1,0 +1,107 @@
+﻿@model IEnumerable<P.Models.MedicalRecord>
+
+@{
+    ViewData["Title"] = "MedRecView";
+    Layout = "/Views/Shared/_AdminBodyLayout.cshtml";
+
+}
+
+
+<p>
+    <a asp-action="Add" class="genric-btn info">Add New Medical Record</a>
+</p>
+<div class="table-responsive">
+<table class="table">
+        <thead class="thead-dark">
+        <tr>
+           
+            <th>
+                @Html.DisplayNameFor(model => model.PatientName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateOfBirth)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gender)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PatientMedicalHistory)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Medications)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Diagnosis)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TestResults)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProgressNotes)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TreatmentPlans)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VitalSigns)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SurgicalReports)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DischargeSummaries)
+            </th>
+                <th>Controls</th>
+           
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+               
+            <td>
+                @Html.DisplayFor(modelItem => item.PatientName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateOfBirth)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gender)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatientMedicalHistory)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Medications)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Diagnosis)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TestResults)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProgressNotes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TreatmentPlans)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VitalSigns)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SurgicalReports)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DischargeSummaries)
+            </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.RecordId" class="genric-btn link">Update</a>
+                        <br />
+                        <a asp-action="Delete" asp-route-id="@item.RecordId" class="genric-btn link">Delete</a>
+                    </td>
+        </tr>
+}
+    </tbody>
+</table>
+</div>

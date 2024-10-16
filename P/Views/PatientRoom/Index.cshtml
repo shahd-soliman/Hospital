@@ -1,0 +1,45 @@
+﻿
+
+@model List<Room>
+@{
+    Layout = "/Views/Shared/_PatientLayout.cshtml";
+}
+
+
+
+<div class="container">
+    <!-- Section Tittle -->
+    <div class="row justify-content-center">
+        <div class="col-lg-6">
+            <div class="section-tittle text-center mb-100">
+                @* <span>Our Doctors</span> *@
+                <h2>Our Rooms</h2>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+
+        @foreach(var item in Model)
+        {
+            
+        
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
+            <div class="single-team mb-30">
+                <div class="team-img">
+                    <img src="~/img/gallery/@item.RoomImg" alt="" width="250" height="450">
+                </div>
+                <div class="team-caption">
+                   <div><h3>@item.RoomName</h3></div>
+                    <!-- Team social -->
+                    <div class="team-social">
+                       <h3>@item.Location</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        }
+
+        
+       
+    </div>
+</div>

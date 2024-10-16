@@ -1,0 +1,15 @@
+﻿@model Department
+@{
+    ViewData["Title"] = "Remove";
+
+    Layout = "/Views/Shared/_AdminBodyLayout.cshtml";
+}
+<h1>Confirm Deletion</h1>
+<div><p> Are you sure you want to delete this department ? (@Model.DeptName)</p></div>
+<form asp-action="ApplyRemove" asp-controller="AdminDepartment">
+    <input type="hidden" asp-for="DeptId" />
+    <div>
+        <a asp-action="ApplyRemove" asp-route-id="@Model.DeptId" class="btn btn-danger">Yes</a>
+        <a class="btn btn-dark btn-success" asp-action="Index">No</a>
+    </div>
+</form>

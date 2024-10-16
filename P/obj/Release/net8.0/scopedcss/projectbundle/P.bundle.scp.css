@@ -1,0 +1,98 @@
+/* _content/P/Views/Shared/_Layout.cshtml.rz.scp.css */
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-3h03m0wxvi] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-3h03m0wxvi] {
+  color: #0077cc;
+}
+
+.btn-primary[b-3h03m0wxvi] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-3h03m0wxvi], .nav-pills .show > .nav-link[b-3h03m0wxvi] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-3h03m0wxvi] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-3h03m0wxvi] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-3h03m0wxvi] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-3h03m0wxvi] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-3h03m0wxvi] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}
+/* _content/P/Views/Shared/_PatientLayout.cshtml.rz.scp.css */
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-35l5y2ijsn] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-35l5y2ijsn] {
+  color: #0077cc;
+}
+
+.btn-primary[b-35l5y2ijsn] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-35l5y2ijsn], .nav-pills .show > .nav-link[b-35l5y2ijsn] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-35l5y2ijsn] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-35l5y2ijsn] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-35l5y2ijsn] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-35l5y2ijsn] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-35l5y2ijsn] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}

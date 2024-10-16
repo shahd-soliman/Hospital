@@ -1,0 +1,123 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Downloads\\\u0627\u0644\u0645\u0628\u0627\u062F\u0631\u0629\\P\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1C2E4C01-AA45-47EC-A48E-7EB1CA1DCF27}|P\\P.csproj|d:\\downloads\\\u0627\u0644\u0645\u0628\u0627\u062F\u0631\u0629\\p\\p\\controllers\\patientappointmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C2E4C01-AA45-47EC-A48E-7EB1CA1DCF27}|P\\P.csproj|solutionrelative:p\\controllers\\patientappointmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C2E4C01-AA45-47EC-A48E-7EB1CA1DCF27}|P\\P.csproj|d:\\downloads\\\u0627\u0644\u0645\u0628\u0627\u062F\u0631\u0629\\p\\p\\views\\patientappointment\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1C2E4C01-AA45-47EC-A48E-7EB1CA1DCF27}|P\\P.csproj|solutionrelative:p\\views\\patientappointment\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C2E4C01-AA45-47EC-A48E-7EB1CA1DCF27}|P\\P.csproj|d:\\downloads\\\u0627\u0644\u0645\u0628\u0627\u062F\u0631\u0629\\p\\p\\views\\patientappointment\\appview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1C2E4C01-AA45-47EC-A48E-7EB1CA1DCF27}|P\\P.csproj|solutionrelative:p\\views\\patientappointment\\appview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C2E4C01-AA45-47EC-A48E-7EB1CA1DCF27}|P\\P.csproj|d:\\downloads\\\u0627\u0644\u0645\u0628\u0627\u062F\u0631\u0629\\p\\p\\views\\patientappointment\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1C2E4C01-AA45-47EC-A48E-7EB1CA1DCF27}|P\\P.csproj|solutionrelative:p\\views\\patientappointment\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 21,
+          "SelectedChildIndex": 10,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\Downloads\\\u0627\u0644\u0645\u0628\u0627\u062F\u0631\u0629\\P\\P\\Views\\PatientAppointment\\Edit.cshtml",
+              "RelativeDocumentMoniker": "P\\Views\\PatientAppointment\\Edit.cshtml",
+              "ToolTip": "D:\\Downloads\\\u0627\u0644\u0645\u0628\u0627\u062F\u0631\u0629\\P\\P\\Views\\PatientAppointment\\Edit.cshtml",
+              "RelativeToolTip": "P\\Views\\PatientAppointment\\Edit.cshtml",
+              "ViewState": "AgIAAEAAAAAAAAAAAADwv0sAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-16T18:13:53.076Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Downloads\\\u0627\u0644\u0645\u0628\u0627\u062F\u0631\u0629\\P\\P\\Views\\PatientAppointment\\Index.cshtml",
+              "RelativeDocumentMoniker": "P\\Views\\PatientAppointment\\Index.cshtml",
+              "ToolTip": "D:\\Downloads\\\u0627\u0644\u0645\u0628\u0627\u062F\u0631\u0629\\P\\P\\Views\\PatientAppointment\\Index.cshtml",
+              "RelativeToolTip": "P\\Views\\PatientAppointment\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFsAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-16T18:00:40.987Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AppView.cshtml",
+              "DocumentMoniker": "D:\\Downloads\\\u0627\u0644\u0645\u0628\u0627\u062F\u0631\u0629\\P\\P\\Views\\PatientAppointment\\AppView.cshtml",
+              "RelativeDocumentMoniker": "P\\Views\\PatientAppointment\\AppView.cshtml",
+              "ToolTip": "D:\\Downloads\\\u0627\u0644\u0645\u0628\u0627\u062F\u0631\u0629\\P\\P\\Views\\PatientAppointment\\AppView.cshtml",
+              "RelativeToolTip": "P\\Views\\PatientAppointment\\AppView.cshtml",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-16T18:00:17.364Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PatientAppointmentController.cs",
+              "DocumentMoniker": "D:\\Downloads\\\u0627\u0644\u0645\u0628\u0627\u062F\u0631\u0629\\P\\P\\Controllers\\PatientAppointmentController.cs",
+              "RelativeDocumentMoniker": "P\\Controllers\\PatientAppointmentController.cs",
+              "ToolTip": "D:\\Downloads\\\u0627\u0644\u0645\u0628\u0627\u062F\u0631\u0629\\P\\P\\Controllers\\PatientAppointmentController.cs",
+              "RelativeToolTip": "P\\Controllers\\PatientAppointmentController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFYAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T17:57:53.308Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 341,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

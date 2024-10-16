@@ -1,0 +1,82 @@
+﻿@model IEnumerable<P.Models.Appointment>
+
+@{
+    ViewData["Title"] = "AppView";
+    Layout = "/Views/Shared/_AdminBodyLayout.cshtml";
+}
+
+
+<p>
+    <a asp-action="Add" class="genric-btn info">Add New Appointment</a>
+</p>
+<table class="table">
+    <thead class ="thead-dark">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.F_Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.L_Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Message)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gender)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Phone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Department)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Doctor)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.F_Name)
+            </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.L_Name)
+                </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Message)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gender)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Department.DeptName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Doctor.F_Name )
+            </td>
+            <td>
+                    <a asp-action="Edit" asp-route-id="@item.ID" class="genric-btn link">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@item.ID" class="genric-btn link">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

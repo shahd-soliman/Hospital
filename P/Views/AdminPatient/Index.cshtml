@@ -1,0 +1,56 @@
+﻿@model List<Patient>
+@{
+    ViewData["Title"] = "Index";
+
+    Layout = "/Views/Shared/_AdminBodyLayout.cshtml";
+}
+<h1>Hello</h1>
+<h3>
+   
+   
+        <a class="btn btn-info rounded-1 rounded-2 me-5" asp-action="New">
+        Add Patient
+        </a>
+
+</h3>
+
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>P_ID</th>
+        <th>F_Name</th>
+        <th>L_Name</th>
+        <th>Age</th>
+        <th>Address</th>
+        <th>Room_ID</th>
+        <th>Phone</th>
+        <th>Edit</th>
+        <th>Remove</th>
+        
+
+
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.PId</td>
+            <td>@item.F_Name</td>
+            <td>@item.L_Name</td>
+            <td>@item.Age</td>
+            <td>@item.Address</td>
+            <td>@item.RoomId</td>
+            <td>@item.Phone</td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.PId" class="btn btn-info rounded rounded-3 me-2">
+                    Edit</a></td>
+           
+            <td>
+                <a asp-action="Remove" asp-route-id="@item.PId" class="btn btn-danger rounded rounded-3 me-2">
+                    Remove
+                </a>
+            </td>
+            
+
+
+        </tr>
+    }
+</table>

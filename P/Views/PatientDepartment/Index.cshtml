@@ -1,0 +1,68 @@
+﻿@model List<Department>
+@{
+    Layout = "/Views/Shared/_PatientLayout.cshtml";
+}
+<div class="department_area section-padding2">
+    <div class="container">
+        <!-- Section Tittle -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-tittle text-center mb-100">
+                    <span>Our Departments</span>
+                    <h2>Our Medical Services</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="depart_ment_tab mb-30">
+                    <!-- Tabs Buttons -->
+                    <ul class="nav" id="myTab" role="tablist">
+                        @foreach(var dept in Model){
+                            
+                        
+                        <li class="nav-item">
+                                <a class="nav-link @(Model.IndexOf(dept) == 0 ? "active" : "")" id="@dept.DeptName-tab" data-toggle="tab" href="#@dept.DeptName" role="tab" aria-controls="@dept.DeptName" aria-selected="@(Model.IndexOf(dept) == 0 ? "true" : "false")">
+                                <i class="@dept.Logo"></i>
+                                <h4>@dept.DeptName</h4>
+                            </a>
+                        </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="dept_main_info white-bg">
+            <div class="tab-content" id="myTabContent">
+
+                @foreach(var deppt in Model)
+                {
+                    <div class="tab-pane fade @(Model.IndexOf(deppt) == 0 ? "show active" : "")" id="@deppt.DeptName" role="tabpanel" aria-labelledby="@deppt.DeptName-tab">
+                    <!-- single_content  -->
+                    <div class="row align-items-center no-gutters">
+
+
+                        <div class="col-lg-7">
+                            <div class="dept_info">
+                                <h3>@deppt.Headline</h3>
+                                <p>@deppt.Description</p>
+                                    <a asp-action="Create" asp-controller="PatientAppointment" class="dep-btn">Appointment<i class="ti-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+
+                            <div class="col-lg-5" >
+                                <div class="dept_thumb" >
+                                <img src="~/img/gallery/department_man.png" alt="" width="250px" >
+                            </div>
+                        </div>
+                    </div>
+                    <!-- single_content  -->
+                </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,51 @@
+﻿@model List<Department>
+@{
+    ViewData["Title"] = "Index";
+
+    Layout = "/Views/Shared/_AdminBodyLayout.cshtml";
+}
+<h1>Hello</h1>
+<h3>
+    <a class="btn btn-info rounded-1 rounded-2 me-5" asp-action="New">
+        Add Department
+    </a>
+
+</h3>
+<div class="table-responsive">
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Location</th>
+        <th>image</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+    @foreach(var item in Model)
+    {
+        <tr>
+            <td>@item.DeptId</td>
+            <td>@item.DeptName</td>
+            <td>@item.Description</td>
+            <td>@item.DeptLocation</td>
+            <td>
+                @if (item.Img != null)
+                {
+                    <img src="~/uploads/@item.Img
+                        " class="rounded mx-auto d-block" width="100px" height="100px"/>
+                }
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.DeptId" class="btn btn-info rounded rounded-3 me-3">
+                    Edit
+                </a>
+            </td>
+            <td>
+                <a asp-action="Remove" asp-route-id ="@item.DeptId" class="btn btn-danger rounded-3 me-4">Delete</a>
+            </td>
+        </tr>
+    }
+    </table>
+
+</div>

@@ -1,0 +1,43 @@
+﻿@model List<Room>
+@{
+    ViewData["Title"] = "Index";
+
+    Layout = "/Views/Shared/_AdminBodyLayout.cshtml";
+}
+<h1>Hello</h1>
+<p>
+    <a asp-action="New" class="genric-btn info">Add New Room</a>
+</p>
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>Room_ID</th>
+        <th>Room_Name</th>
+        <th>Location</th>
+        <th>Image</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.RoomId</td>
+            <td>@item.RoomName</td>
+            <td>@item.Location</td>
+            <td>
+                @if (item.RoomImg != null)
+                {
+                    <img src="~/uploads/@item.RoomImg
+                  " class="rounded mx-auto d-block" width="100px" height="100px" />
+                }
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.RoomId" class="btn btn-info rounded rounded-3 me-3">
+                    Edit
+                </a>
+            </td>
+            <td>
+                <a asp-action="Delete" asp-route-id="@item.RoomId" class="btn btn-danger rounded-3 me-4">Delete</a>
+            </td>
+        </tr>
+    }
+</table>

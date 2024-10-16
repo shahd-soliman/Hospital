@@ -1,0 +1,46 @@
+﻿@model Department
+@{
+    ViewData["Title"] = "Edit";
+
+    Layout = "/Views/Shared/_AdminBodyLayout.cshtml";
+}
+<h1>Edit Department</h1>
+<form asp-action="SaveEdit" asp-controller="AdminDepartment" asp-route-id="@Model.DeptId" enctype="multipart/form-data">
+    <input type="hidden" asp-for="DeptId" />
+    <div>
+        <label asp-for="DeptName"></label>
+        <input asp-for="DeptName" class="from-control" />
+    </div>
+    <div>
+        <label asp-for="Description"></label>
+        <input asp-for="Description" class="from-control" />
+    </div>
+    <div>
+        <label asp-for="DeptLocation"></label>
+        <input asp-for="DeptLocation" class="from-control" />
+    </div>
+    <div>
+        <label asp-for="Logo"></label>
+        <input asp-for="Logo" class="from-control" />
+    </div>
+    <div>
+        <label asp-for="Img"></label>
+        <input type="file" name="ImgFile" asp-for="Img" class="from-control" />
+    </div>
+    <div>
+        <label asp-for="Headline"></label>
+        <input asp-for="Headline" class="from-control" />
+    </div>
+    <div>
+        <label asp-for="Web_Id"></label>
+        <input asp-for="Web_Id" class="from-control" />
+    </div>
+    <div>
+        <input type="submit" value="Save" class="btn btn-success" />
+    </div>
+    <div>
+        <a class="btn btn-success" asp-action="Index">Back</a>
+    </div>
+
+
+</form>

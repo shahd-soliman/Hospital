@@ -1,0 +1,55 @@
+﻿@model Department
+
+@{
+    Layout = "/Views/Shared/_PatientLayout.cshtml";
+}
+<form asp-action="SaveNew" asp-controller="PatientDepartment" method="post">
+    <div>
+        <label asp-for="DeptName"></label>
+        <input class="form-control" asp-for="DeptName" />
+        <span asp-validation-for="DeptName" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="Headline"></label>
+        <input class="form-control" asp-for="Headline" />
+        <span asp-validation-for="Headline" class="text-danger"></span>
+
+    </div>
+    <div>
+        <label asp-for="Description"></label>
+        <input class="form-control" asp-for="Description" />
+        <span asp-validation-for="Description" class="text-danger"></span>
+
+    </div>
+    <div>
+        <label asp-for="Logo"></label>
+        <input class="form-control" asp-for="Logo" />
+        <span asp-validation-for="Logo" class="text-danger"></span>
+
+    </div>
+    <div>
+        <label asp-for="Web_Id"></label>
+        <input class="form-control" asp-for="Web_Id" />
+        <span asp-validation-for="Web_Id" class="text-danger"></span>
+
+    </div>
+    <div>
+        <label asp-for="Img"></label>
+        <input class="form-control" asp-for="Img" />
+        <span asp-validation-for="Img" class="text-danger"></span>
+
+    </div>
+   @*  <div>
+        <label asp-for="IsTrue"></label>
+        <input class="form-control" asp-for="IsTrue" />
+        <span asp-validation-for="IsTrue" class="text-danger"></span>
+
+    </div> *@
+   
+    @* <div>
+        <label asp-for="Logo"></label>
+        <select class="form-control" asp-for="Logo" asp-items="Logo"></select>
+    </div> *@
+    <input type="submit" value="Add" class="btn btn-success" />
+
+</form> 

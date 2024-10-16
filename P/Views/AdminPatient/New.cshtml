@@ -1,0 +1,70 @@
+﻿@model Patient
+@{
+    ViewData["Title"] = "New";
+
+    Layout = "/Views/Shared/_AdminBodyLayout.cshtml";
+
+}
+
+<h3>
+    <i class="bi bi-plus-circle-dotted">New Patient</i>
+</h3>
+  
+
+
+<form asp-action="SaveNew" asp-controller="AdminPatient">
+    
+    <div class="form-group">
+        <label asp-for="F_Name" class="control-label"></label>
+        <input asp-for="F_Name" class="form-control" />
+        
+    </div>
+    <div class="form-group">
+        <label asp-for="L_Name" class="control-label"></label>
+        <input asp-for="L_Name" class="form-control" />
+        <span asp-validation-for="L_Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Age" class="control-label"></label>
+        <input asp-for="Age" class="form-control" />
+        <span asp-validation-for="Age" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Address" class="control-label"></label>
+        <input asp-for="Address" class="form-control" />
+        <span asp-validation-for="Address" class="text-danger"></span>
+    </div>
+    <div>
+    <div class="form-group">
+        <label asp-for="RoomId" class="control-label">Room</label>
+       <select asp-for="RoomId">
+            @foreach (Room item in ViewBag.RoomList)
+            {
+                <option value="@item.RoomId">@item.RoomName</option>
+            }
+       </select>
+        <span asp-validation-for="RoomId" class="text-danger"></span>
+    </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="Phone" class="control-label"></label>
+        <input asp-for="Phone" class="form-control" />
+        <span asp-validation-for="Phone" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Add" class="btn btn-primary" />
+    </div>
+  
+    <div>
+    <a class="btn btn-info rounded-1 rounded-2 me-5" asp-action="Index" >Back
+    </a>
+
+
+    </div>
+    
+
+</form>
+<script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
+

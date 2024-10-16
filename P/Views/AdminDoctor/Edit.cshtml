@@ -1,0 +1,82 @@
+﻿@model P.Models.Doctor
+
+@{
+    ViewData["Title"] = "Edit";
+
+    Layout = "/Views/Shared/_AdminBodyLayout.cshtml";
+}
+
+<h1>Edit</h1>
+
+<h4>Doctor</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="DocEdit" asp-controller="AdminDoctor" asp-route-id="@Model.DId" enctype="multipart/form-data">
+            <input type="hidden" asp-for="DId" />
+            <div class="form-group">
+                <label asp-for="F_Name" class="control-label"></label>
+                <input asp-for="F_Name" class="form-control" />
+                <span asp-validation-for="F_Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="M_Name" class="control-label"></label>
+                <input asp-for="M_Name" class="form-control" />
+                <span asp-validation-for="M_Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="L_Name" class="control-label"></label>
+                <input asp-for="L_Name" class="form-control" />
+                <span asp-validation-for="L_Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="City" class="control-label"></label>
+                <input asp-for="City" class="form-control" />
+                <span asp-validation-for="City" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Street" class="control-label"></label>
+                <input asp-for="Street" class="form-control" />
+                <span asp-validation-for="Street" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Salary" class="control-label"></label>
+                <input asp-for="Salary" class="form-control" />
+                <span asp-validation-for="Salary" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hire_Date" class="control-label"></label>
+                <input asp-for="Hire_Date" class="form-control" />
+                <span asp-validation-for="Hire_Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Gender" class="control-label"></label>
+                <input asp-for="Gender" class="form-control" />
+                <span asp-validation-for="Gender" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Shift_Type" class="control-label"></label>
+                <input asp-for="Shift_Type" class="form-control" />
+                <span asp-validation-for="Shift_Type" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DeptId" class="control-label"></label>
+                <select asp-for="DeptId" class="form-control" >
+                    @foreach (Department item in ViewBag.deptlist)
+                    {
+                        <option value="@item.DeptId">@item.DeptName</option>
+                    }
+                </select>
+                <span asp-validation-for="DeptId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ImgName" class="control-label"></label>
+                <input type="file" name="ImgNameFile" asp-for="ImgName" class="form-control" />
+                <span asp-validation-for="ImgName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>

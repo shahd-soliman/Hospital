@@ -1,0 +1,134 @@
+﻿@model Appointment
+@{
+    ViewData["Title"] = "Index";
+    Layout = "_PatientLayout";
+    SelectList deptlist = new SelectList(ViewBag.deptlist, "DeptId", "DeptName");
+    //SelectList doclist = new SelectList(ViewBag.doclist, "DocId", "F_Name");
+
+}
+<div class="row">
+    <div class="col-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Apply for an Appointment</h4>
+                <form class="forms-sample" asp-action="Save" asp-controller="PatientAppointment" method="post">
+                    <div class="form-group">
+                        <label asp-for="PatientId">First Name</label>
+                        <input type="hidden" asp-for="PatientId" class="form-control" value="@ViewBag.patientId" />
+                        <span asp-validation-for="PatientId" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="F_Name">First Name</label>
+                        <input class="form-control" asp-for="F_Name">
+                        <span asp-validation-for="F_Name" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="L_Name">Last Name</label>
+                        <input class="form-control" asp-for="L_Name">
+                        <span asp-validation-for="L_Name" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Address">Address</label>
+                        <input class="form-control" asp-for="Address">
+                        <span asp-validation-for="Address" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Phone">Phone</label>
+                        <input class="form-control" asp-for="Phone">
+                        <span asp-validation-for="Phone" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Age">Age</label>
+                        <input class="form-control" asp-for="Age">
+                        <span asp-validation-for="Age" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Date">Date</label>
+                        <input class="form-control" asp-for="Date" type="datetime">
+                        <span asp-validation-for="Date" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Date">Date</label>
+                        <input class="form-control" asp-for="Date" type="time">
+                        <span asp-validation-for="Date" class="text-danger"></span>
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <label asp-for="Gender">Gender</label>
+                        <select class="form-control" asp-for="Gender">
+                            <option value="">-- Select GenderType --</option>
+                            <option>Male</option>
+                            <option>Female</option>
+                        </select>
+                        <span asp-validation-for="Gender" class="text-danger"></span>
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <label asp-for="Message">Description of Illness</label>
+                        <textarea class="form-control" asp-for="Message"></textarea>
+                        <span asp-validation-for="Message" class="text-danger"></span>
+                    </div>
+                    <br />
+                    <!-- Dropdown for Department -->
+                    <div class="form-group">
+                        <label asp-for="DeptId">Department</label>
+                        <select id="DeptId" class="form-control" asp-for="DeptId" asp-items="deptlist" onchange="GetDoctor()">
+                            <option value="">-- Select Department --</option>
+                        </select>
+                    </div>
+                    <br />
+                    <!-- Dropdown for Doctor -->
+                @*     <div class="form-group">
+                        <label asp-for="DocId">Doctor</label>
+                        <select id="DocId" class="form-control" asp-for="DocId" asp-items="doclist">
+
+                            <option value="">-- Select Doctor --</option>
+                        </select>
+                    </div> *@
+                    <br />
+                    <div>
+                        <label asp-for="DocId" class="control-label">Doctor</label>
+                        <select asp-for="DocId">
+                            @foreach (Doctor item in ViewBag.doclist)
+                            {
+                                <option value="@item.DId">@item.F_Name @item.L_Name</option>
+                            }
+                        </select>
+
+                    </div>
+                    <button type="submit" class="btn btn-gradient-primary me-2">Submit</button>
+                    <button class="btn btn-light">Cancel</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    <script src="~/lib/jquery/dist/jquery.min.js">
+    </script>
+    <script src="~/lib/jquery/dist/jquery.js">
+    </script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js">
+    </script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js">
+    </script>
+
+    <script>
+        function GetDoctor() {
+            var deptid = document.getElementById("DeptId").value;
+            $.ajax({
+                url: "~/PatientAppointment/GetDoctorsByDepartment?departmentId=" + deptid,
+                success: function (result) {
+                    document.getElementById("DocId").innerHTML = "";
+                    for (let emp of result) {
+                        document.getElementById("DocId").innerHTML += <option value="${emp.id}">${emp.name}</option>;
+                    }
+                }
+            }
+            );
+        }
+    </script>
+}

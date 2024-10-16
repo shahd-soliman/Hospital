@@ -1,0 +1,54 @@
+﻿@model List<Department>
+
+@{
+    Layout = "/Views/Shared/_PatientLayout.cshtml";
+}
+
+<div class="row justify-content-center">
+    <div class="col-lg-6">
+        <div class="section-tittle text-center mb-100">
+            <span>Our Doctors</span>
+        </div>
+    </div>
+</div>
+
+@foreach (var department in Model)
+{
+    <div class="team-area section-padding30">
+        <div class="container">
+            <!-- Section Title -->
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="section-tittle text-center mb-100">
+                        <h2>@department.DeptName  Department</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                @foreach (var doc in department.Doctors)
+                {
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
+                        <div class="single-team mb-30">
+                            <div class="team-img">
+                                <img src="~/img/gallery/@doc.ImgName" alt="">
+                            </div>
+                            <div class="team-caption">
+                                <h3><a href="#">@doc.F_Name</a></h3>
+                                <span>@doc.DeptId</span>
+
+                                <!-- Team social -->
+                                <div class="team-social">
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fas fa-globe"></i></a>
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+}
